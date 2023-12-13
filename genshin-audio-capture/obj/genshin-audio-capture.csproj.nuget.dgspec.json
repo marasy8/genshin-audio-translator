@@ -41,6 +41,10 @@
             "NAudio": {
               "target": "Package",
               "version": "[2.2.1, )"
+            },
+            "Vosk": {
+              "target": "Package",
+              "version": "[0.3.38, )"
             }
           },
           "imports": [

@@ -182,6 +182,18 @@
             "rid": "win"
           }
         }
+      },
+      "Vosk/0.3.38": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Vosk.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Vosk.dll": {}
+        },
+        "build": {
+          "build/Vosk.targets": {}
+        }
       }
     }
   },
@@ -443,11 +455,31 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Vosk/0.3.38": {
+      "sha512": "W/me6nwF7fq9uWVmqbmWvPx3DjhMSzb9D85IZa0FUg2PIxcWjfG55vYHBc+9xCuNL/zohIBRYTKiP4itnMU3ww==",
+      "type": "package",
+      "path": "vosk/0.3.38",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Vosk.targets",
+        "build/lib/linux-x64/libvosk.so",
+        "build/lib/osx-universal/libvosk.dylib",
+        "build/lib/win-x64/libgcc_s_seh-1.dll",
+        "build/lib/win-x64/libstdc++-6.dll",
+        "build/lib/win-x64/libvosk.dll",
+        "build/lib/win-x64/libwinpthread-1.dll",
+        "lib/netstandard2.0/Vosk.dll",
+        "vosk.0.3.38.nupkg.sha512",
+        "vosk.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "NAudio >= 2.2.1"
+      "NAudio >= 2.2.1",
+      "Vosk >= 0.3.38"
     ]
   },
   "packageFolders": {
@@ -490,6 +522,10 @@
           "NAudio": {
             "target": "Package",
             "version": "[2.2.1, )"
+          },
+          "Vosk": {
+            "target": "Package",
+            "version": "[0.3.38, )"
           }
         },
         "imports": [

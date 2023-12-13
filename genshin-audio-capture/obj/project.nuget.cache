@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GdFxSyJ+xqEcoi5kybFcKA+fPMj6GXMUkYXJ9jpyvXH0TWQm9FgNo4ougGFJaUQ7pwhJuafCFhhO1OghJHwHaA==",
+  "dgSpecHash": "WlAdF41lH4mwxhWOEoG2VPe082TjAeAe+2HLZMPViUqVD89VmD2FZbnkGd8hakVu2QYsscUF2PweOhcSLmqoKg==",
   "success": true,
   "projectFilePath": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-overworld-translator\\genshin-overworld-translator\\genshin-audio-capture\\genshin-audio-capture.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,8 @@
     "C:\\Users\\zai\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
     "C:\\Users\\zai\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
     "C:\\Users\\zai\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\zai\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\zai\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\zai\\.nuget\\packages\\vosk\\0.3.38\\vosk.0.3.38.nupkg.sha512"
   ],
   "logs": []
 }
