@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("genshin-audio-capture")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e54ce70c77ecee2e5c7e94a349e2145544426d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f9e472d2ba97a6878ccc9b426c00ae56821c813")]
 [assembly: System.Reflection.AssemblyProductAttribute("genshin-audio-capture")]
 [assembly: System.Reflection.AssemblyTitleAttribute("genshin-audio-capture")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

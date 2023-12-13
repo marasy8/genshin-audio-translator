@@ -15,7 +15,22 @@ class Program
             capture.DataAvailable += (s, a) => 
             {
                 // For testing, print out the length of the captured data
-                Console.WriteLine($"Captured {a.BytesRecorded} bytes of data.");
+                // Console.WriteLine($"Captured {a.BytesRecorded} bytes of data.");
+
+                // Console.WriteLine($"Audio Format: {capture.WaveFormat}");
+
+                using (var ms = new MemoryStream(a.Buffer))
+                {
+                    using (var rdr = new RawSourceWaveStream(ms, capture.WaveFormat))
+                    {
+                        var newFormat = new WaveFormat(16000, 1); // 16kHz mono
+                        using (var resampler = new MediaFoundationResampler(rdr, newFormat))
+                        {
+                            
+                        }
+                    }
+                }
+
             };
 
             // Start capturing
