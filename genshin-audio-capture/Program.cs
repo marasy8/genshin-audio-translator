@@ -8,6 +8,10 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Initialize Vosk Model
+        Vosk.Vosk.SetLogLevel(0); // set logs for warnings
+        Model model = new Model("./vosk-model-small-ja-0.22");
+
         Console.WriteLine("Starting audio capture...");
         using (var capture = new WasapiLoopbackCapture())
         {
@@ -18,7 +22,8 @@ class Program
                 // Console.WriteLine($"Captured {a.BytesRecorded} bytes of data.");
 
                 // Console.WriteLine($"Audio Format: {capture.WaveFormat}");
-
+                
+                // Convert to format usable by Vosk Model
                 using (var ms = new MemoryStream(a.Buffer))
                 {
                     using (var rdr = new RawSourceWaveStream(ms, capture.WaveFormat))
