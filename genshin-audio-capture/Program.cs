@@ -6,11 +6,33 @@ using NAudio.Wave;
 
 class Program
 {
+    // function to initialize Vosk Model
     static Model InitializeVoskModel(string modelPath)
     {
-        // Initialize Vosk Model
+        
         Vosk.Vosk.SetLogLevel(0); // set logs for warnings
         return model = new Model("./vosk-model-small-ja-0.22");
+    }
+
+    // function for handling speech recognition
+    static void RecognizeSpeech(Model model, byte[] audioData, int sampleRate)
+    {
+        using (var recognizer = new VoskRecognizer(model, sampleRate))
+        {
+            if (recognizer.AcceptWaveform(audioData, audioData.Length))
+            {
+                string result = recognizer.Result();
+                Console.WriteLine(result); // Print the recognized text
+            }
+            else
+            {
+                string partial = recognizer.PartialResult();
+                Console.WriteLine(partial); // Print partial results
+            }
+
+            string finalResult = recognizer.FinalResult();
+            Console.WriteLine(finalResult());
+        }
     }
     static void Main(string[] args)
     {
