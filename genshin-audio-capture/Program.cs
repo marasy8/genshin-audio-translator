@@ -9,9 +9,8 @@ class Program
     // function to initialize Vosk Model
     static Model InitializeVoskModel(string modelPath)
     {
-        
         Vosk.Vosk.SetLogLevel(0); // set logs for warnings
-        return model = new Model("./vosk-model-small-ja-0.22");
+        return model = new Model(modelPath);
     }
 
     // function for handling speech recognition
@@ -58,6 +57,10 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Starting audio capture...");
+
+        // initialize Vosk model
+        Model model = InitializeVoskModel("./vosk-model-small-ja-0.22");
+
         using (var capture = new WasapiLoopbackCapture())
         {
             // Event handler for when data is available
