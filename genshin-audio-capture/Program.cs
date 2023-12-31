@@ -3,6 +3,7 @@
 
 using System;
 using NAudio.Wave;
+using Vosk;
 
 class Program
 {
@@ -30,7 +31,7 @@ class Program
             }
 
             string finalResult = recognizer.FinalResult();
-            Console.WriteLine(finalResult());
+            Console.WriteLine(finalResult);
         }
     }
 
