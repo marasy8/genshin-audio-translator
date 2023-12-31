@@ -6,12 +6,14 @@ using NAudio.Wave;
 
 class Program
 {
-    static void Main(string[] args)
+    static Model InitializeVoskModel(string modelPath)
     {
         // Initialize Vosk Model
         Vosk.Vosk.SetLogLevel(0); // set logs for warnings
-        Model model = new Model("./vosk-model-small-ja-0.22");
-
+        return model = new Model("./vosk-model-small-ja-0.22");
+    }
+    static void Main(string[] args)
+    {
         Console.WriteLine("Starting audio capture...");
         using (var capture = new WasapiLoopbackCapture())
         {
