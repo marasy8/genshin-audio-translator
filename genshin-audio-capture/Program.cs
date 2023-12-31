@@ -11,7 +11,7 @@ class Program
     static Model InitializeVoskModel(string modelPath)
     {
         Vosk.Vosk.SetLogLevel(0); // set logs for warnings
-        return model = new Model(modelPath);
+        return new Model(modelPath);
     }
 
     // function for handling speech recognition
