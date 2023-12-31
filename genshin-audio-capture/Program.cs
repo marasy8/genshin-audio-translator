@@ -43,7 +43,7 @@ class Program
             using (var rdr = new RawSourceWaveStream(ms, format))
             {
                 var newFormat = new WaveFormat(16000, 1); // 16kHz mono
-                using (var resampler = new MediafoundationResampler(rdr, newFormat))
+                using (var resampler = new MediaFoundationResampler(rdr, newFormat))
                 {
                     resampler.ResamplerQuality = 60; // quality can be adjusted here, higher means more cpu intensive
                     using (var resampledMs = new MemoryStream())
