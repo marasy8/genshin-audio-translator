@@ -34,6 +34,27 @@ class Program
             Console.WriteLine(finalResult());
         }
     }
+
+    // function to convert the audio data into the right format
+    static byte[] ProcessedAudioData(byte[] buffer, WaveFormat format)
+    {
+        using (var ms = new MemoryStream(buffer))
+        {
+            using (var rdr = new RawSourceWaveStream(ms, format))
+            {
+                var newFormat = new WaveFormat(16000, 1); // 16kHz mono
+                using (var resampler = new MediafoundationResampler(rdr, newFormat))
+                {
+                    resampler.ResamplerQuality = 60; // quality can be adjusted here, higher means more cpu intensive
+                    using (var resampledMs = new MemoryStream())
+                    {
+                        WaveFileWriter.WriteWavFileToStream(resampledMs, resampler);
+                        return resampledMs.ToArray();
+                    }
+                }
+            }
+        }
+    }
     static void Main(string[] args)
     {
         Console.WriteLine("Starting audio capture...");
@@ -47,19 +68,8 @@ class Program
 
                 // Console.WriteLine($"Audio Format: {capture.WaveFormat}");
                 
-                // Convert to format usable by Vosk Model
-                using (var ms = new MemoryStream(a.Buffer))
-                {
-                    using (var rdr = new RawSourceWaveStream(ms, capture.WaveFormat))
-                    {
-                        var newFormat = new WaveFormat(16000, 1); // 16kHz mono
-                        using (var resampler = new MediaFoundationResampler(rdr, newFormat))
-                        {
-                            
-                        }
-                    }
-                }
-
+                byte[] processedAudioData = ProcessedAudioData(a.Buffer, capture.WaveFormat);
+                RecognizeSpeech(model, processedAudioData, 16000);
             };
 
             // Start capturing
