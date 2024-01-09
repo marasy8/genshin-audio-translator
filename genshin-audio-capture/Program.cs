@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 class Program
 {
     private static StringBuilder speechBuffer = new StringBuilder();
-    private static System.Timers.Timer outputTimer;
+    private static System.Timers.Timer outputTimer = new System.Timers.Timer(5000); // 5000 milliseconds interval or 5 seconds
 
     static void Main(string[] args)
     {
@@ -21,7 +21,6 @@ class Program
         Model model = InitializeVoskModel("./vosk-model-small-ja-0.22");
 
         // set up and enable timer
-        outputTimer = new Timer(5000); // 5000 milliseconds interval or 5 seconds
         outputTimer.Elapsed += OnTimedEvent;
         outputTimer.AutoReset = true;
         outputTimer.Enabled = true;
@@ -67,7 +66,7 @@ class Program
             if (recognizer.AcceptWaveform(audioData, audioData.Length))
             {
                 string result = recognizer.Result();
-                var resultJson = JsonConvert.DeserializedObject<dynamic>(result);
+                var resultJson = JsonConvert.DeserializeObject<dynamic>(result);
                 string text = resultJson.text;
                 if (!string.IsNullOrWhiteSpace(text))
                 {
