@@ -98,10 +98,10 @@ class Program
     }
 
     // function handling the buffer, clearing and resetting based on the timer interval
-    private static void OnTimedEvent(Object source, ElapsedEventArgs e)
+    private static void OnTimedEvent(Object? source, ElapsedEventArgs e)
     {
         // if the buffer is not empty by the end of the interval, output and clear the buffer
-        if (speechBuffer.Length > 0)
+        if (speechBuffer != null && speechBuffer.Length > 0)
         {
             Console.WriteLine(speechBuffer.ToString());
             speechBuffer.Clear();
