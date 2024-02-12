@@ -26,4 +26,3 @@ C:\Users\zai\OneDrive\Documents\Projects\genshin-overworld-translator\genshin-ov
 C:\Users\zai\OneDrive\Documents\Projects\genshin-overworld-translator\genshin-overworld-translator\genshin-audio-capture\bin\Debug\net8.0\libvosk.dll
 C:\Users\zai\OneDrive\Documents\Projects\genshin-overworld-translator\genshin-overworld-translator\genshin-audio-capture\bin\Debug\net8.0\libwinpthread-1.dll
 C:\Users\zai\OneDrive\Documents\Projects\genshin-overworld-translator\genshin-overworld-translator\genshin-audio-capture\bin\Debug\net8.0\Vosk.dll
-C:\Users\zai\OneDrive\Documents\Projects\genshin-overworld-translator\genshin-overworld-translator\genshin-audio-capture\bin\Debug\net8.0\Newtonsoft.Json.dll
