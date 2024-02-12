@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 class Program
 {
     private static StringBuilder speechBuffer = new StringBuilder();
-    private static System.Timers.Timer outputTimer;
+    private static Timer outputTimer;
 
     static void Main(string[] args)
     {

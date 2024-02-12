@@ -42,10 +42,6 @@
               "target": "Package",
               "version": "[2.2.1, )"
             },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
             "Vosk": {
               "target": "Package",
               "version": "[0.3.38, )"
