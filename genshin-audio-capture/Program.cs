@@ -7,13 +7,6 @@ using Vosk;
 
 class Program
 {
-    // function to initialize Vosk Model
-    static Model InitializeVoskModel(string modelPath)
-    {
-        Vosk.Vosk.SetLogLevel(0); // set logs for warnings
-        return new Model(modelPath);
-    }
-
     // function for handling speech recognition
     static void RecognizeSpeech(Model model, byte[] audioData, int sampleRate)
     {
@@ -49,6 +42,7 @@ class Program
                     using (var resampledMs = new MemoryStream())
                     {
                         WaveFileWriter.WriteWavFileToStream(resampledMs, resampler);
+                        
                         return resampledMs.ToArray();
                     }
                 }
@@ -60,7 +54,8 @@ class Program
         Console.WriteLine("Starting audio capture...");
 
         // initialize Vosk model
-        Model model = InitializeVoskModel("./vosk-model-small-ja-0.22");
+        Vosk.Vosk.SetLogLevel(0);
+        Model model = new Model("./vosk-model-small-ja-0.22");
 
         using (var capture = new WasapiLoopbackCapture())
         {
@@ -68,9 +63,9 @@ class Program
             capture.DataAvailable += (s, a) => 
             {
                 // For testing, print out the length of the captured data
-                // Console.WriteLine($"Captured {a.BytesRecorded} bytes of data.");
+                Console.WriteLine($"Captured {a.BytesRecorded} bytes of data.");
 
-                // Console.WriteLine($"Audio Format: {capture.WaveFormat}");
+                Console.WriteLine($"Audio Format: {capture.WaveFormat}");
                 
                 byte[] processedAudioData = ProcessedAudioData(a.Buffer, capture.WaveFormat);
                 RecognizeSpeech(model, processedAudioData, 16000);

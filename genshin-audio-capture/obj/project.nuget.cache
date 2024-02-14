@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WlAdF41lH4mwxhWOEoG2VPe082TjAeAe+2HLZMPViUqVD89VmD2FZbnkGd8hakVu2QYsscUF2PweOhcSLmqoKg==",
+  "dgSpecHash": "Ypykg+rqivTYcllfgfmoWmDdkLf6RabjkllkXakGPsU7ri8z4Zd5xIhLW9HsvM5JZd6zWPmh5ejRR1dTDchcBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-overworld-translator\\genshin-overworld-translator\\genshin-audio-capture\\genshin-audio-capture.csproj",
+  "projectFilePath": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-audio-translator\\genshin-audio-translator\\genshin-audio-capture\\genshin-audio-capture.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zai\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\zai\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-overworld-translator\\genshin-overworld-translator\\genshin-audio-capture\\genshin-audio-capture.csproj": {}
+    "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-audio-translator\\genshin-audio-translator\\genshin-audio-capture\\genshin-audio-capture.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-overworld-translator\\genshin-overworld-translator\\genshin-audio-capture\\genshin-audio-capture.csproj": {
+    "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-audio-translator\\genshin-audio-translator\\genshin-audio-capture\\genshin-audio-capture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-overworld-translator\\genshin-overworld-translator\\genshin-audio-capture\\genshin-audio-capture.csproj",
+        "projectUniqueName": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-audio-translator\\genshin-audio-translator\\genshin-audio-capture\\genshin-audio-capture.csproj",
         "projectName": "genshin-audio-capture",
-        "projectPath": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-overworld-translator\\genshin-overworld-translator\\genshin-audio-capture\\genshin-audio-capture.csproj",
+        "projectPath": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-audio-translator\\genshin-audio-translator\\genshin-audio-capture\\genshin-audio-capture.csproj",
         "packagesPath": "C:\\Users\\zai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-overworld-translator\\genshin-overworld-translator\\genshin-audio-capture\\obj\\",
+        "outputPath": "C:\\Users\\zai\\OneDrive\\Documents\\Projects\\genshin-audio-translator\\genshin-audio-translator\\genshin-audio-capture\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zai\\AppData\\Roaming\\NuGet\\NuGet.Config"
