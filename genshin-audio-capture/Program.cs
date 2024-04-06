@@ -31,6 +31,8 @@ class Program
 
     // Vosk Demo Byte Buffer
 
+    // TO DO: Check to see if the wasapi audio can be sent directly to this function, check the formats of the recorded files
+
     public static void DemoBytes(Model, model)
     {
         VoskRecognizer rec = new VoskRecognizer(model, 16000.0f);
